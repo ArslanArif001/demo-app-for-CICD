@@ -1,0 +1,10 @@
+version: 0.0
+os: linux
+files:
+  - source: / # All the files from CodeBuild output
+    destination: /var/www/demo-app
+hooks:
+  AfterInstall:
+    - location: scripts/restart_pm2.sh
+      timeout: 300
+      runas: ubuntu

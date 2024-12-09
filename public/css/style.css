@@ -1,0 +1,126 @@
+/* General Body Style */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f0f0f0; /* Light Grey background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh; /* Ensures footer stays at the bottom */
+}
+
+/* Header Style */
+header {
+    font-size: 2.5em;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    background-color: #007bff;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* About Page Header */
+.about-header {
+    font-size: 2.5em;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    background-color: #28a745;
+    width: 100%;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Main Content */
+main {
+    width: 80%;
+    max-width: 1000px;
+    text-align: center;
+    margin-top: 20px;
+    flex-grow: 1; /* Allow main content to take up available space */
+}
+
+/* Card Style */
+.card, .about-card {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.card:hover, .about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card h3, .about-card h3 {
+    color: #007bff;
+    font-size: 1.8em;
+    margin-bottom: 15px;
+}
+
+.card p, .about-card p {
+    font-size: 1.1em;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* Image Container */
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.image-container img {
+    max-width: 80%;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Style */
+footer {
+    background-color: #007bff;
+    color: white;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    position: relative; /* Ensure footer stays below content */
+    margin-top: auto; /* Push the footer to the bottom of the page */
+}
+
+/* Link Styling */
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Add responsive design for mobile */
+@media screen and (max-width: 768px) {
+    main {
+        width: 95%;
+    }
+
+    .card, .about-card {
+        padding: 20px;
+    }
+
+    header, footer, .about-header {
+        font-size: 1.5em;
+    }
+
+    .image-container img {
+        max-width: 100%;
+    }
+}

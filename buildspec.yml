@@ -1,0 +1,25 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+    commands:
+      - echo Installing dependencies...
+      - npm install
+      - echo Fetching PORT from Parameter Store...
+      - |
+        # Fetch the PORT parameter from Parameter Store and write it to .env
+        PORT_VALUE=$(aws ssm get-parameter --name "/demo-app/PORT" --with-decryption --query "Parameter.Value" --output text)
+        echo "PORT=$PORT_VALUE" > .env  # Overwrite .env with just PORT=VALUE
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo "Running tests (if any)..."
+  post_build:
+    commands:
+      - echo Build completed on `date`
+
+artifacts:
+  files:
+    - '**/*'
