@@ -26,7 +26,7 @@ app.get('/', (req, res) => {
         <header>Welcome to the Cloud Deployment App!</header>
         <main>
             <div class="card">
-                <h3>Welcome to the Cloud</h3>
+                <h3>Welcome to the Cloud Class</h3>
                 <p>This application demonstrates the basics of cloud computing, continuous integration (CI), and continuous deployment (CD).</p>
             </div>
             <div class="image-container">
